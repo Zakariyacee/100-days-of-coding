@@ -1,0 +1,293 @@
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap');
+
+
+@import url('https://fonts.googleapis.com/css2?family=Tangerine:wght@400;700&display=swap');
+
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  background-color:white;
+  background-size: cover;
+  color: black;
+  width: 100%;
+}
+
+header{
+  display: flex;
+  height: 100px;
+  justify-content: space-between;
+  align-items:center;
+  margin: 0 20px;
+  border-bottom: 1px solid black;
+}
+
+.logoh1{
+  background-image: linear-gradient(90deg, red,orange, lightgreen);
+    -webkit-background-clip: text;
+    background-clip: text;
+    color: transparent;
+  font-size:33px;
+}
+
+.logoh2{
+  font-family:"tangerine";
+  font-weight:700;
+  font-size:38px;
+}
+
+.toggle-btn{
+  display:none;
+  position: relative;
+  top: -10px;
+}
+
+nav ul{
+  display: flex;
+  align-content: center ;
+  margin-top:10px;
+  list-style: none;
+  margin-right:20px;
+}
+
+
+ ul li a{
+  text-decoration: none;
+  padding: 10px 20px ;
+  margin:0 5px;
+  color:black;
+  font-size:17px ;
+  font-family: "open sans";
+  display:inline-block;
+}
+
+li a::after{
+  display: block;
+  content: "";
+  height:4px;
+  width:0px;
+  background-color: #795379;
+  transition: .5s;
+}
+
+li a:hover::after{
+  width: 100%;
+}
+
+main{
+  height: calc(100vh - 100px);
+  display: flex;
+  align-items: center;
+}
+
+.about{
+  width: 50%;
+  position:relative;
+  bottom:20px;
+  margin-left:15px;
+}
+
+.about-2{
+ display: flex;
+  justify-content: center;
+  margin-left:10%;
+}
+
+.about h1{
+  font-style: normal;
+  font-family: "open sans";
+  font-weight:700;
+  font-size: 54px;
+  color:black;
+  
+}
+
+.about h2{
+  font-family: "open sans";
+  font-style: normal;
+  font-size: 50px;
+  font-weight: 400;
+  position:relative;
+  top: -10px;
+  color:orange;
+}
+
+.about p{
+  font-family: "open sans";
+  font-weight: 400;
+  font-size:20px;
+  margin-bottom:15px;
+  color:black;
+}
+
+.more-btn{
+  padding: 10px 20px;
+  background-color: #795379;
+  color: white;
+  border-radius:10px;
+  border: 1px solid #795379;
+  font-family:"open sans";
+  font-size:14px;
+  font-weight:700;
+  position:relative;
+  top:10px;
+  
+  
+}
+
+.more-btn:hover{
+  border:1px solid #795379;
+  color:#795379;
+  background-color:white;
+  
+}
+
+.book-btn{
+  padding: 10px 20px;
+  background-color: #795379;
+  color: white;
+  border-radius:10px;
+  border: 1px solid #795379;
+  font-family:"open sans";
+  font-size:14px;
+  font-weight:700;
+}
+
+.book-btn:hover{
+  border:1px solid #795379;
+  color:#795379;
+  background-color:white;
+  padding:10px 20px;
+}
+
+
+.dropdown{
+  display:none;
+  position:absolute;
+  top:100px;
+  right: 2rem;
+  width: 300px;
+  background-color:white;
+  backdrop-filter: blur(100%);
+  overflow:hidden;
+  text-decoration:none;
+  border-radius:18px;
+  color: white;
+  border-left: 1px solid #795379;
+  border-right: 1px solid #795379;
+  border-bottom: 1px solid #795379;
+}
+
+.dropdown li{
+  padding:0.7rem;
+  display:flex;
+  justify-content:center;
+  align-items:center;
+}
+
+.dropdown li a{
+  color: #795379;
+}
+
+.dropdown .book-btn{
+  color: white;
+}
+
+.dropdown ul li a::after{
+  color: white;
+}
+
+.dropdown.open{
+  display: block;
+  position: absolute;
+  
+}
+
+.dropdown .book-btn{
+  width:100%;
+  text-align:center;
+}
+
+.blue{
+  height: calc(100%);
+  width: 100%;
+  background-color: navy;
+  position: absolute;
+}
+
+@media (max-width:930px){
+  nav{
+    display:none;
+  }
+  main{
+    border:none;
+  }
+  .toggle-btn{
+    display:block;
+  }
+}
+
+@media (max-width:641px)  {
+  main{
+    display: flex;
+    flex-wrap: wrap;
+  }
+  .about{
+    width: 100%;
+    position: relative;
+    top: 15%;
+  }
+
+  .about-2{
+    display: flex;
+    justify-content: flex-start;
+  }
+
+  header{
+     border-bottom: 1px solid black;
+    width: 100%;
+    justify-content: space-between;
+    
+  }
+
+  .toggle-btn{
+    margin-right: 20px;
+  }
+  
+  .about h1{
+    font-size: 40px;
+  }
+  .about h2{
+    font-size: 35px;
+  }
+
+  .about p{
+    font-size: 16px;
+  }
+  
+  .hero{
+    width: 60%;
+    position: relative;
+    top:100px;
+  }
+  
+}
+
+
+@media (min-width:641px){
+
+  .main{
+    display: flex;
+    flex-wrap: nowrap;
+    width: 100%;
+  }
+  
+  
+  .hero{
+    width: 65%;
+  }
+}
