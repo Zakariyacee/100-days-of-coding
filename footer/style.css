@@ -1,0 +1,150 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&family=Tangerine:wght@400;700&display=swap');
+
+*{
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+body{
+  height: 100%;
+  width: 100%;
+}
+
+footer{
+  min-height:330px;
+  max-height: 1500px;
+  background-color: #2b3240;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  align-content:center;
+  flex-wrap:nowrap;
+  color: white;
+  flex: 0 1 100%;
+}
+
+h2{
+  font-style: normal;
+  font-family: "Montserrat";
+  font-weight: 700;
+  font-size: 17px;
+  margin-bottom: 20px;
+}
+
+h2::after{
+  content: "";
+  width: 45px;
+  height: 2px;
+  background-color: #691240;
+  border-radius: 10px;
+  display: block;
+  position: relative;
+  top: 7px;
+}
+
+div{
+  width: 230px;
+  height: 210px;
+  margin: 10px;
+}
+
+ul{
+  margin-top: 14px;
+}
+
+ul li{
+  list-style: none;
+  margin: 2px 0px;
+  padding: 6px 16px 6px 0;
+}
+
+
+ul li a{
+  text-decoration: none;
+  font-style: normal;
+  font-family:"montserrat" ;
+  font-weight: 400;
+  font-size: 14px;
+  color: white;
+  opacity: 60%;
+}
+
+ul li a:hover{
+  opacity: 100%;
+  padding-left:9px ;
+  transition-duration: .5s;
+}
+
+
+.follow ul {
+  display: flex;
+  flex-direction:row;
+}
+
+.follow ul{
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.follow a{
+  display: inline-block;
+  font-size: 20px;
+  height: 40px;
+  width: 40px;
+  background-color: rgba(255, 255, 255, 0.2);
+  line-height: 40px;
+  text-align: center;
+  border-radius:50%;
+  color: white;
+}
+
+
+.follow a:hover{
+  opacity: 100%;
+  padding-left:0 ;
+  background-color: white;
+  color: black ;
+}
+
+/*Responsive*/
+
+@media (max-width:749px){
+
+  footer{
+    display: flex;
+    flex-wrap: wrap;
+    flex: 1 1 100%;
+    justify-content: flex-start;
+    align-items: center;
+    
+  }
+  div{
+    width: 40%;
+    margin:0px 10px 30px 10px;
+    position: relative;
+    top: 45px;
+    justify-content: flex-start;
+  }
+}
+
+@media (max-width:480px) {
+
+  footer{
+    display: flex;
+    flex-flow: column wrap;
+    justify-content: space-around;
+    align-items: center;
+    align-content:center;
+    color: white;
+    flex: 0 1 100%;
+  }
+  
+  div{
+    width: 100%;
+    margin:0px 5px 45px 20px;
+    position: relative;
+    top: 45px;
+    justify-content: flex-start;
+  }
+}
